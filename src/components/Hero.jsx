@@ -27,12 +27,12 @@ const Hero = () => {
                             <form className="flex flex-col space-y-4">
                                 <h2 className="text-neutral-600 font-semibold tracking-tight">Enter your details below</h2>
                                 <div className="flex flex-col">
-                                    <label htmlFor="weight" className="text-slate-800 tracking-tight">Weight</label>
+                                    <label htmlFor="weight" className="text-slate-500 font-semibold text-xs tracking-tight">Weight</label>
                                     <input type="text" id="weight" className="p-2 rounded-md border-2 border-neutral-400" />
                                 </div>
 
                                 <div className="flex flex-col">
-                                    <label htmlFor="height" className="text-slate-800 tracking-tight">Height</label>
+                                    <label htmlFor="height" className="text-slate-500 font-semibold text-xs tracking-tight">Height</label>
                                     <input type="text" id="height" className="p-2 rounded-md border-2 border-neutral-400" />
                                 </div>
 
