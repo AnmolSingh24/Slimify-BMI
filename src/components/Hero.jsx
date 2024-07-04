@@ -15,7 +15,7 @@ const Hero = () => {
                             <span className='text-black bg-clip-text text-4xl font-bold tracking-tight mb-10'>Body Mass Index Calculator</span>
                             {SUMMARY.map((desc, index) => (
                                 <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
-                                    <p className='my-2 max-w-xl py-6 text-slate-700 font-semibold tracking-tighter text-justify'>
+                                    <p className='my-2 max-w-xl py-6 text-slate-400 font-semibold tracking-tighter'>
                                         {desc.description}
                                     </p>
                                 </div>
