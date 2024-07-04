@@ -4,7 +4,7 @@ import { BsMoonStars } from "react-icons/bs";
 
 const Features = () => {
   return (
-    <div className="bg-gradient-to-r from-white via-blue-100 to-blue-50 rounded-full my-48 p-20">
+    <div className="bg-gradient-to-r from-white via-blue-100 to-white rounded-full my-48 p-20">
       <div className="flex justify-center items-center gap-20">
         <div className="w-56">
           <PiBowlFoodLight className="h-12 w-12 bg-pink-300 text-white p-2 mb-2 rounded-full" />

@@ -1,7 +1,15 @@
+import { useState } from "react";
 import Icon from "../assets/WebIcon.png"
 import { SUMMARY } from "../constants"
+import BMIForm from "./BMIForm"
 
 const Hero = () => {
+    const [bmi, setBmi] = useState(null);
+
+    const handleBmiChange = (bmiValue) => {
+        setBmi(bmiValue);
+    };
+
     return (
         <>
             <div className='pb-4 lg:mb-35'>
@@ -22,27 +30,7 @@ const Hero = () => {
                             ))}
                         </div>
                     </div>
-                    <div className='w-full lg:w-1/2 lg:p-36'>
-                        <div className="flex flex-col bg-white h-72 w-80 p-6 mt-20 rounded-lg shadow-lg">
-                            <form className="flex flex-col space-y-4">
-                                <h2 className="text-neutral-600 font-semibold tracking-tight">Enter your details below</h2>
-                                <div className="flex flex-col">
-                                    <label htmlFor="weight" className="text-slate-500 font-semibold text-xs tracking-tight">Weight</label>
-                                    <input type="text" id="weight" className="p-2 rounded-md border-2 border-neutral-400" />
-                                </div>
-
-                                <div className="flex flex-col">
-                                    <label htmlFor="height" className="text-slate-500 font-semibold text-xs tracking-tight">Height</label>
-                                    <input type="text" id="height" className="p-2 rounded-md border-2 border-neutral-400" />
-                                </div>
-
-                                <button type="submit" className="bg-blue-600 text-white p-2 rounded-md hover:bg-blue-700 tracking-tight">
-                                    Submit
-                                </button>
-                            </form>
-                        </div>
-
-                    </div>
+                    <BMIForm onBmiChange={handleBmiChange} />
                 </div>
             </div>
         </>

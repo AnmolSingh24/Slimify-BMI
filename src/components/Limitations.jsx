@@ -56,7 +56,7 @@ const Limitations = () => {
         </div>
       </div>
 
-      <div className='flex justify-center items-center gap-8 mt-6'>
+      <div className='flex justify-center items-center gap-8 mt-6 mb-20'>
         <div className='h-42 w-80 shadow-2xl rounded-2xl'>
           <div className='flex justify-start items-center gap-4 px-4 py-2'>
             <LuBaby className='text-yellow-400 w-6 h-6' />
