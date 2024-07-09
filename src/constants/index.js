@@ -1,6 +1,6 @@
 export const SUMMARY = [
     {
-        description: "Better understand your weight in relation to your height using our body mass index (BMI) calculator. While BMI is not the sole determinant of a healthy weight, it offers a valuable starting point to evaluate your overall health and well-being."
+        description: "Better understand your weight in relation to your height using our BMI calculator. While not the sole determinant of a healthy weight, BMI provides a valuable starting point to evaluate your health, identify potential risks, and make informed decisions for a healthier lifestyle."
     }
 ];
 
