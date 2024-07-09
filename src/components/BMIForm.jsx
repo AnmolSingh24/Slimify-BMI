@@ -46,6 +46,7 @@ const BMIForm = () => {
                                 className="p-2 rounded-md border-2 border-neutral-400 text-neutral-800"
                                 placeholder='kg'
                                 required
+                                autoComplete='off'
                             />
                         </div>
 
@@ -59,6 +60,7 @@ const BMIForm = () => {
                                 className="p-2 rounded-md border-2 border-neutral-400 text-neutral-800"
                                 placeholder='cm'
                                 required
+                                autoComplete='off'
                             />
                         </div>
 
