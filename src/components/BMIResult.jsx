@@ -6,13 +6,14 @@ const BMIResult = ({ bmi }) => {
 
     if (bmi < 18.5) {
         message = 'Underweight';
-    } else if (bmi >= 18.5 && bmi < 24.9) {
+    } else if (bmi >= 18.5 && bmi < 25) {
         message = 'Normal weight';
-    } else if (bmi >= 25 && bmi < 29.9) {
+    } else if (bmi >= 25 && bmi < 30) {
         message = 'Overweight';
     } else {
         message = 'Obesity';
     }
+    console.log("BMI: ", bmi)
 
     return (
         <div>
@@ -23,7 +24,7 @@ const BMIResult = ({ bmi }) => {
                 </div>
                 <div className="w-full lg:w-auto -mt-2 mb-6 lg:mt-0 lg:mb-0 flex justify-center items-center">
                     <button className="w-12 h-9 lg:w-16 lg:h-12 bg-blue-600 hover:bg-blue-700 rounded-lg text-white font-semibold">
-                        <BMITipsDialogBox />
+                        <BMITipsDialogBox message={message} />
                     </button>
                 </div>
             </div>
@@ -36,8 +37,8 @@ const BMIResult = ({ bmi }) => {
                     cornerRadius: 1,
                     subArcs: [
                         { limit: 18.5, color: 'red', showTick: true, tooltip: { text: 'Underweight' } },
-                        { limit: 24.9, color: 'green', showTick: true, tooltip: { text: 'Normal' } },
-                        { limit: 29.9, color: 'yellow', showTick: true, tooltip: { text: 'Overweight' } },
+                        { limit: 25, color: 'green', showTick: true, tooltip: { text: 'Normal Weight' } },
+                        { limit: 30, color: 'yellow', showTick: true, tooltip: { text: 'Overweight' } },
                         { color: '#EA4225', tooltip: { text: 'Obesity' } }
                     ]
                 }}
@@ -48,15 +49,6 @@ const BMIResult = ({ bmi }) => {
                 }}
                 labels={{
                     valueLabel: { formatTextValue: value => value },
-                    tickLabels: {
-                        type: 'outer',
-                        valueConfig: { formatTextValue: value => value, fontSize: 10 },
-                        ticks: [
-                            { value: "Underweight" },
-                            { value: "Normal" },
-                            { value: "Obese" }
-                        ],
-                    }
                 }}
                 value={parseFloat(bmi)}
                 minValue={10}
