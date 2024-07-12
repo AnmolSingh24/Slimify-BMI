@@ -16,6 +16,8 @@ const BMIForm = () => {
             const bmiValue = (weight / (heightInMeters * heightInMeters));
             setBmi(bmiValue.toFixed(2));
             setIsFlipped(true);
+            setWeight('');
+            setHeight('');
         } else {
             alert('Please enter valid weight and height');
         }
